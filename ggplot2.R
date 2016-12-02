@@ -47,4 +47,17 @@ ggplot(diamonds, aes(x = carat, y = price, col = clarity)) +
 dia_plot <- ggplot(diamonds, aes(x = carat, y = price))+
                geom_point(aes(col = clarity))
                
-                            
+ set.seed(1)
+
+dia_plot <- ggplot(diamonds, aes(x = carat, y = price))
+
+dia_plot <- ggplot(diamonds, aes(x = carat, y = price)) +
+           geom_point(alpha = 0.2)
+
+dia_plot <- ggplot(diamonds, aes(x = carat, y = price)) +
+           geom_point(alpha = 0.2) +
+           geom_smooth(se = FALSE)
+
+dia_plot <- ggplot(diamonds, aes(x = carat, y = price)) +
+           geom_point(alpha = 0.2) +
+           geom_smooth(aes(col = clarity), se = FALSE)                           
